@@ -31,7 +31,7 @@ class Router
                 $params = $this->matchParamsRequestRoute($requestUrl, $route->getParameters());
                 $controller = $route->getController();
                 //@todo check return call_user_fn_array
-                $response = call_user_func_array([new $controller, $route->getAction()], [$request ,$params]);
+                $response = call_user_func_array([new $controller, $route->getAction()], $params);
                 if ($response instanceof Response) {
                     $response->send();
                 }

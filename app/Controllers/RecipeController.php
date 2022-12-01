@@ -18,8 +18,8 @@ class RecipeController
      * @param int $id
      * @return JsonResponse
      */
-    public function show($request, $id)
+    public function show($id)
     {
-        return new JsonResponse(['content' => $id], 200);
+        return new JsonResponse(['content' => 'asd'], 200);
     }
 }
