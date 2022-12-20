@@ -4,10 +4,19 @@
 namespace App\Controllers;
 
 use Component\Http\JsonResponse;
-use Component\Http\Request;
+use Database\DB;
 
 class RecipeController
 {
+
+    private $connection;
+
+    public function __construct()
+    {
+        $pdo = new DB();
+        $this->connection = $pdo->getConnection();
+    }
+
     public function index($id)
     {
         echo $id;
