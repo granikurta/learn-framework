@@ -8,7 +8,7 @@ class Connection
 {
     private Driver $driver;
 
-    public function __construct(Driver $driver)
+    public function __construct(array $params, Driver $driver)
     {
         $this->driver = $driver;
     }

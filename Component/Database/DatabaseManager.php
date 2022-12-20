@@ -23,7 +23,7 @@ class DatabaseManager
             $driver = $params['driver'];
         }
         $driver = self::createDriver($driver);
-        return new Connection($driver);
+        return new Connection($params, $driver);
     }
 
     private static function createDriver(string $driver): Driver
